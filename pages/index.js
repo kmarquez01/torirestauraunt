@@ -1,5 +1,3 @@
-
-
 import Homes from "./Home/index"
 
 
