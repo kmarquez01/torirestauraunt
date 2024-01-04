@@ -8,19 +8,19 @@ import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from "react-icons/fa"
 
 const Slideshow = ({slides}) => {
 const [current, setNew] = useState(0);
-// const  delay = 5000;
+const  delay = 5000;
 
-// React.useEffect(() => {
-//     setTimeout(
-//       () =>
-//         setNew((prevIndex) =>
-//           prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-//         ),
-//       delay
-//     );
+React.useEffect(() => {
+    setTimeout(
+      () =>
+        setNew((prevIndex) =>
+          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+        ),
+      delay
+    );
 
-//     return () => {};
-//   }, [current]);
+    return () => {};
+  }, [current]);
 
 const next = () => {
     setNew(current === slides.length - 1 ? 0 : current + 1) 

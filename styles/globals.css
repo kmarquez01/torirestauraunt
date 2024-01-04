@@ -726,7 +726,7 @@ h1 {
   /* height: fit-content; */
   height: 25%;
   border-radius: 10px;
-  /* animation: fade 5s infinite; */
+  animation: fade 5s infinite;
 }
 
 @keyframes fade {
@@ -759,15 +759,27 @@ h1 {
 /*Locations*/
 
 #Locations{
-  height:100vh;
-  background-color: #39CCCC
+  display: flex;
+  height: 100vh;
+  background-color: #39CCCC;
+  align-items: center;
+  justify-content: center;
+
 }
+
+/* .location-holder{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
+} */
 
 .location-container{
   display: flex;
   flex-direction: column;
-  height: 100%;
   margin: 0px 50px;
+  width:100%;
   justify-content: space-around;
   align-items: center;
 }
@@ -780,11 +792,15 @@ h1 {
 }
 
 .location-title{
-  display:block;
-  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  font-family: Arial,Helvetica,sans-serif;
   font-size: 5vh;
-  font-weight: bold;
+  font-weight: 700;
+  align-items: center;
+  justify-content: flex-start;
+
 }
+
 
 .location-list{
   margin: 0px 5px;
@@ -797,7 +813,7 @@ h1 {
 .map{
 
   width:50%;
-  height:50%;
+  height:500px;
 
 }
 
@@ -935,6 +951,44 @@ h1 {
     position: relative;
     top: 30px;
   }
+
+  .contact-container{
+    top:10%;
+    font-size: 16px;
+  }
+
+  .contact-container h1{
+    padding-bottom: 10px;
+  }
+  
+  .contact-form .names{
+    flex-direction: column;
+    grid-gap: 15px;
+    width: auto;
+  }
+
+  .contact-form input[type = 'text']{
+    font-size: 16px;
+  }
+
+  .contact-form textarea[name ='company']{
+    width: auto;
+    font-size: 16px;
+  }
+
+  .others{
+    width: auto;
+  }
+
+  .contact-form input[name = "email"]{
+    width:auto
+  }
+  .contact-form input[name = "company"]{
+    width:auto;
+  }
+  .contact-form .btn-primary{
+    font-size: 16px;
+  }
 }
 
 @media only screen and (min-width: 500px){
@@ -1003,43 +1057,6 @@ h1 {
     margin-bottom: 2rem;
   }
 
-  .contact-container{
-    top:10%;
-    font-size: 16px;
-  }
-
-  .contact-container h1{
-    padding-bottom: 10px;
-  }
-  
-  .contact-form .names{
-    flex-direction: column;
-    grid-gap: 15px;
-    width: auto;
-  }
-
-  .contact-form input[type = 'text']{
-    font-size: 16px;
-  }
-
-  .contact-form textarea[name ='company']{
-    width: auto;
-    font-size: 16px;
-  }
-
-  .others{
-    width: auto;
-  }
-
-  .contact-form input[name = "email"]{
-    width:auto
-  }
-  .contact-form input[name = "company"]{
-    width:auto;
-  }
-  .contact-form .btn-primary{
-    font-size: 16px;
-  }
 }
 
 @media only screen and (min-width: 1100px) {
