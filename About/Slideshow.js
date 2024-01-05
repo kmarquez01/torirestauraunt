@@ -4,30 +4,60 @@ import React, {useState} from "react"
 import  {SlideshowData}  from "./SlideshowData"
 
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from "react-icons/fa"
+import { Fade } from "@mui/material";
 
 
 const Slideshow = ({slides}) => {
 const [current, setNew] = useState(0);
+const [animationActive, setAnimationActive] = useState(true);
+
+const imagestyle = {
+    image: {
+        width: "100%",
+        height: "25%",
+        borderRadius: "10px",
+        animation: "fade 5s infinite"
+        
+    },
+    
+
+    stillimage: {
+        width: "100%",
+        height: "25%",
+        borderRadius: "10px",
+    }
+
+}
+
 const  delay = 5000;
 
-React.useEffect(() => {
-    setTimeout(
-      () =>
-        setNew((prevIndex) =>
-          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-        ),
-      delay
-    );
+if (setAnimationActive === true) {
+    React.useEffect(() => {
+        setTimeout(
+          () =>
+            setNew((prevIndex) =>
+              prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+            ),
+          delay
+        );
+    
+        return () => {};
+      }, [current]);
+}
+else{
+    clearTimeout(delay, 0)
+}
 
-    return () => {};
-  }, [current]);
 
 const next = () => {
-    setNew(current === slides.length - 1 ? 0 : current + 1) 
+    setNew(current === slides.length - 1 ? 0 : current + 1)
+    setAnimationActive(false)
+
 }
 
 const prev = () => {
-    setNew(current === 0 ? slides.length - 1: current - 1)
+    setNew(current === 0 ? slides.length - 1: current - 1);
+    setAnimationActive(false)
 }
 
 console.log(current)
@@ -44,14 +74,15 @@ if (!Array.isArray(slides) || slides.length <= 0){
         <div className = "slide">
             <div className = "slidesub">
             <FaArrowAltCircleLeft className ="left" onClick = {prev} />
+
             
             <div className = "slide-images">
             {SlideshowData.map((slide, index) => {
                 return(
                     // <div className = {index === current ? 'slide active' : 'slide'} key ={index}>
                     <div className = 'slide-active' key ={index}>
-                         
-                        {index === current && (<img src = {slide.image} alt = "whatever" className = "image"/>) }
+                    
+                        {index === current && (<img src = {slide.image} alt = "whatever" className = "image" style = {animationActive ? imagestyle.image : imagestyle.stillimage}/>) }
                         
                     </div>
                     

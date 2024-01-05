@@ -625,14 +625,18 @@ h1 {
   height:100%;
 }
 
+.landing{
+  display: flex;
+  height: 100vh;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-txt{
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     position: absolute;
     font-size: 3vh;
     color: whitesmoke;
@@ -721,13 +725,12 @@ h1 {
   /* transition: opacity 1000ms ease-in-out; */
 }
 
-.image{
+ /* .image{
   width: 100%;
-  /* height: fit-content; */
   height: 25%;
   border-radius: 10px;
   animation: fade 5s infinite;
-}
+} */
 
 @keyframes fade {
   0%,100% { opacity: 0 }
