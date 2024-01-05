@@ -4,4 +4,4 @@ The goal of this creation was to implement web design using Next js features  co
 
 I am currently working on developing this website, so it is under construction. However, as progress is being made the changes will become evident in this repository.
 
-Visit the website here : https://lafu.vercel.app/
+Visit the website here : https://lafurestauraunt.vercel.app/
