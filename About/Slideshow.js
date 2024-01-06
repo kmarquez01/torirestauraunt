@@ -30,7 +30,6 @@ const imagestyle = {
 }
 
 
-
 const next = () => {
     setNew(current === slides.length - 1 ? 0 : current + 1)
     setAnimationActive(false)
@@ -92,7 +91,6 @@ else{
     //         {   clearTimeout(delay, 0)  }
     //   };
 
-    
 
     return(
 
