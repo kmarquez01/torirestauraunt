@@ -31,8 +31,8 @@ const imagestyle = {
 
 const  delay = 5000;
 
-if (setAnimationActive === true) {
     React.useEffect(() => {
+        if (animationActive === true){
         setTimeout(
           () =>
             setNew((prevIndex) =>
@@ -42,11 +42,13 @@ if (setAnimationActive === true) {
         );
     
         return () => {};
-      }, [current]);
-}
-else{
-    clearTimeout(delay, 0)
-}
+      }else
+      {
+        clearTimeout(delay, 0)
+    }
+
+    }, [current]);
+
 
 
 const next = () => {
