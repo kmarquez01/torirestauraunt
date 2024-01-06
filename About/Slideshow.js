@@ -29,24 +29,6 @@ const imagestyle = {
 
 }
 
-const  delay = 5000;
-
-if (setAnimationActive === true) {
-    React.useEffect(() => {
-        setTimeout(
-          () =>
-            setNew((prevIndex) =>
-              prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-            ),
-          delay
-        );
-    
-        return () => {};
-      }, [current]);
-}
-else{
-    clearTimeout(delay, 0)
-}
 
 
 const next = () => {
@@ -60,16 +42,60 @@ const prev = () => {
     setAnimationActive(false)
 }
 
-console.log(current)
+// console.log(current)
 
 if (!Array.isArray(slides) || slides.length <= 0){
     return null;
 }
 
+const  delay = 5000;
+
+console.log(animationActive);
+
+React.useEffect(() => {
+    if(animationActive === true){   
+    setTimeout(
+      () =>
+        setNew((prevIndex) =>
+          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+        ),
+      delay
+    );
+
+    // return () => {};  
+}
+else{
+    
+    {   clearTimeout(delay, 0)  }
+}
+    }, [current])
+
+// React.useEffect(() => {
+//         setTimeout(
+//           () =>
+//             setNew((prevIndex) =>
+//               prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+//             ),
+//           delay
+//         );
+    
+//         return () => {};
+//       }, [current])}
+
+        
 
 
+
+
+    //   else{
+        
+    //         {   clearTimeout(delay, 0)  }
+    //   };
+
+    
 
     return(
+
     
         <div className = "slide">
             <div className = "slidesub">
@@ -82,7 +108,7 @@ if (!Array.isArray(slides) || slides.length <= 0){
                     // <div className = {index === current ? 'slide active' : 'slide'} key ={index}>
                     <div className = 'slide-active' key ={index}>
                     
-                        {index === current && (<img src = {slide.image} alt = "whatever" className = "image" style = {animationActive ? imagestyle.image : imagestyle.stillimage}/>) }
+                        {index === current  && (<img src = {slide.image} alt = "whatever" className = "image" style = {animationActive ? imagestyle.image : imagestyle.stillimage}/>) }
                         
                     </div>
                     
@@ -94,6 +120,7 @@ if (!Array.isArray(slides) || slides.length <= 0){
             
             
             <FaArrowAltCircleRight className ="right" onClick = {next} /> 
+            
             </div>
             <div className = "aboutus-container">
                 <title className = "aboutus-title">Who We are</title> 
@@ -102,6 +129,9 @@ if (!Array.isArray(slides) || slides.length <= 0){
              
         </div>
     )
+    
 
 }
+
+
 export default Slideshow
