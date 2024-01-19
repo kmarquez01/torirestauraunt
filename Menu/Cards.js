@@ -4,7 +4,7 @@ import CardItem from "./CardItem"
 
 import Navigation from "../Navigation"
 
-import Popup from "./PopUp"
+// import Popup from "./PopUp"
 
 import {useState} from "react"
 
