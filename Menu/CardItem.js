@@ -128,7 +128,7 @@ function CardItem(props){
           </DialogContent>
           
       </Dialog> 
-       ) : (counter - counter) && ""}
+       ) : ""}
       </>
     );
   };
