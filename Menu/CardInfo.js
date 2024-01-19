@@ -90,38 +90,38 @@ const CardInfo = [
     },
     {
         id: 13,
-        image: "/images/img1.jpg",
-        name: "Yakitori",
-        description: "Bite sized chicken pieces roasted on a skewer.",
-        price: 2.00,
+        image: "/images/img13.jpg",
+        name: "Shabu Shabu",
+        description: "Deep dish hotpot containing layers of meat and vegetables.",
+        price: 10.00,
         
     },
     {
         id: 14,
-        image: "/images/img2.jpg",
-        name: "Sushi",
-        description: "Pressed vinegared rice with a piece of raw fish or shellfish on top",
-        price: 6.00
+        image: "/images/img14.jpg",
+        name: "Gyoza",
+        description: "Wrap containing pork cabbage and mushrooms",
+        price: 5.00
     },
     {
         id: 15,
-        image: "/images/img3.jpg",
-        name: "Udon",
-        description: "A type of thick noodle in a soup base combined with various ingredients.",
-        price: 8.00
+        image: "/images/img15.jpg",
+        name: "Gyudon",
+        description: "A type of ricebowl consisting of meat and vegetables.",
+        price: 12.00
     },
     {
         id: 16,
-        image: "/images/img4.jpg",
-        name: "Ramen",
-        description:"Noodle soup mixed with broth, miso, boiled egg and tonkotsu pork.",
+        image: "/images/img16.jpg",
+        name: "Unagi",
+        description:"Grilled eel consisting of various spices for a refreshing taste.",
         price: 7.50
     },
     {
         id: 17,
-        image: "/images/img5.jpg",
-        name: "Donburi",
-        description: "A dish with various meat, fish and vegetables over steamed rice.",
+        image: "/images/img17.jpg",
+        name: "Shogoyaki",
+        description: "A bowl consisting of ginger pork, and vegetables over steamed rice.",
         price: 6.50,
 
     },

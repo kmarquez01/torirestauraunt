@@ -47,39 +47,28 @@ if (!Array.isArray(slides) || slides.length <= 0){
     return null;
 }
 
-const  delay = 5000;
+// const  delay = 5000;
 
-console.log(animationActive);
-
-React.useEffect(() => {
-    if(animationActive === true){   
-    setTimeout(
-      () =>
-        setNew((prevIndex) =>
-          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-        ),
-      delay
-    );
-
-    // return () => {};  
-}
-else{
-    
-    {   clearTimeout(delay, 0)  }
-}
-    }, [current])
+// console.log(animationActive);
 
 // React.useEffect(() => {
-//         setTimeout(
-//           () =>
-//             setNew((prevIndex) =>
-//               prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-//             ),
-//           delay
-//         );
+//     if(animationActive === true){   
+//     setTimeout(
+//       () =>
+//         setNew((prevIndex) =>
+//           prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+//         ),
+//       delay
+//     );
+
+//     // return () => {};  
+// }
+// else{
     
-//         return () => {};
-//       }, [current])}
+//     {   clearTimeout(delay, 0)  }
+// }
+//     }, [current])
+
 
         
 

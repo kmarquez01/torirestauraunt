@@ -14,6 +14,7 @@ import CardInfo from "./CardInfo"
 function Cards(){
 
     const [openPopup, setOpenPopup] = useState(false)
+    const [dialogData, setDialogData] = useState(null)
 
 
     return(
@@ -23,10 +24,10 @@ function Cards(){
     
             <h1>Menu</h1>
             <div className = "cards_container">
-
+            {/* data = {() => setModalData(CardInfo)} */}
                     <ul className = "cards_items">
-                        <CardItem onClick = {() => setOpenPopup(true)} />
-                        <Popup openPopup = {openPopup} setOpenPopup = {setOpenPopup} key = {CardInfo.id}></Popup>  
+                        <CardItem onClick = {() => {setOpenPopup(true); setDialogData(null)}}  />
+                        {/* <Popup openPopup = {openPopup} setOpenPopup = {setOpenPopup} setModalData = {setModalData} modalData = {modalData}></Popup>   */}
                     </ul>
 
 
