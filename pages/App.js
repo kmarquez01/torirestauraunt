@@ -1,5 +1,4 @@
-// import { ShopContextProvider } from "../contexts/shop-context"
-// import ReactDOM from 'react-dom'
+
 import Homes from "./Home/index"
 
 
