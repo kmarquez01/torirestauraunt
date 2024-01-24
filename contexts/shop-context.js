@@ -1,6 +1,5 @@
 import React, {createContext, useState} from 'react'
 import CardInfo from '../Menu/CardInfo'
-import counter from '../Menu/CardItem'
 
 
 export const ShopContext = createContext(null)
