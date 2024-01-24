@@ -14,9 +14,9 @@ function App(){
       
       <div>
       
-      {/* <ShopContextProvider> */}
+      <ShopContextProvider>
       <Homes />
-      {/* </ShopContextProvider> */}
+      </ShopContextProvider>
       </div>
                 
    
