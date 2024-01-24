@@ -1,17 +1,15 @@
 
+import Cart from "../../Cart/_Cart"
+
 import Navigation from "../../Navigation"
 
-function Cart(){
+function Carts(){
     return(
         <div>
             <Navigation />
-            <section className = "cart">
-                <div className = "paysheet">
-                    Under Construction!
-                </div>
-            </section>
+            <Cart />
         </div>
     )
 }
 
-export default Cart
+export default Carts

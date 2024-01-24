@@ -6,31 +6,38 @@ import CardInfo from "./CardInfo"
 
 import Cards from "./Cards"
 
-import {useState} from "react"
+import {useContext, useState} from "react"
 
 import {Dialog, DialogTitle, DialogContent, Card} from "@mui/material"
 
 import { FaTimes } from "react-icons/fa"
+import { ShopContext } from "../contexts/shop-context";
 
 
 
 function CardItem(props){
 
-  // const {setOpenPopup, openPopup, dialogData, setDialogData} = props
+  const { addToCart, cartItems } = useContext(ShopContext);
+
+
+  // const {id, image, name, description} = props
 
   const [openPopup, setOpenPopup] = useState(false)
 
   const [dialogData, setDialogData] = useState(null)
 
+
   const [counter, setCounter] = useState(0);
   const [price, setPrice] = useState(0);
 
+  
+  const [cartItemAmount, setCartItemAmount] = useState(cartItems[CardInfo.id])
 
     const handleAdd = () => {
   
         setCounter(counter + 1)
         setPrice(price + dialogData.price)
-        console.log(price)
+        // console.log(price)
 
     }
 
@@ -49,7 +56,7 @@ function CardItem(props){
             }
     }
 
-  console.log(dialogData)
+
 
     return (
       <>
@@ -61,7 +68,7 @@ function CardItem(props){
                 <div className = "cont1">
                     {/* <figure className = "cards_item_picwrap" data-category = {item.name}> */}
                     <h1 className = "cards_item_wrap">{item.name}</h1>
-                <img src={item.image} alt = "Image" className = "cards_item_img" onClick = {() => {setDialogData(item); setOpenPopup(true);}}/>
+                <img src={item.image} alt = "Image" className = "cards_item_img" onClick = {() => {setDialogData(item); setOpenPopup(true);  setCartItemAmount(cartItems[item.id])}}/>
                 {/* </figure> */}
                 <div className = "cards_item_info">
                   <h5 className = "cards_item_text">{item.description}</h5>
@@ -72,8 +79,8 @@ function CardItem(props){
             // );
           ))}
           </div>
-    {openPopup === true ? (
-      
+    {openPopup === true ? (  
+   
       // (firstState === true ? ( () => setCounter(0) && setPrice(0)) : "" ) &&
 
           <Dialog className = "dialogue-box-container" open = {openPopup}>
@@ -122,12 +129,15 @@ function CardItem(props){
                   </button>
                </div>
                <div className = "addcart">
-                   <a href = "/Cart" className = "cartbutton">Add to cart</a>
+                   <button className = "cartbutton" onClick = {() => {addToCart(dialogData.id, counter); setOpenPopup(false); setCounter(0);}}>
+                    Add to cart {cartItemAmount >  0 && <> ({cartItemAmount})</>}
+                    </button>
             
               </div>
           </DialogContent>
           
       </Dialog> 
+      
        ) : ""}
       </>
     );

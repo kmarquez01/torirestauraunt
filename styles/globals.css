@@ -612,8 +612,10 @@ h1 {
 
 .cartbutton{
   border: solid;
+  font-size: 14px;
+  background-color: whitesmoke;
   border-width: 1px;
-  padding: 5px;
+  padding: 8px;
   border-radius: 5px;
 }
 
@@ -921,9 +923,16 @@ h1 {
 
 /* Cart */
 
-.cart{
+
+.cart-page{
+  height: 100vh;
+}
+
+.cart-container{
   position: absolute;
-  top:10%;
+  top: 10%;
+  display: flex;
+  align-items: center;
 }
 
 @media only screen and (max-width: 400px){
