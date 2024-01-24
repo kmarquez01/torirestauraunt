@@ -1,4 +1,4 @@
-import { ShopContextProvider } from "../contexts/shop-context"
+// import { ShopContextProvider } from "../contexts/shop-context"
 import ReactDOM from 'react-dom'
 import Homes from "./Home/index"
 
@@ -14,9 +14,9 @@ function App(){
       
       <div>
       
-      <ShopContextProvider>
+     
       <Homes />
-      </ShopContextProvider>
+    
       </div>
                 
    
