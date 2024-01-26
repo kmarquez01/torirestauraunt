@@ -24,6 +24,8 @@ function CardItem(props){
 
   const [openPopup, setOpenPopup] = useState(false)
 
+  // const {setOpenPopup, openPopup} = props
+
   const [dialogData, setDialogData] = useState(null)
 
 

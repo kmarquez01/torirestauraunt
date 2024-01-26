@@ -26,7 +26,7 @@ function Cards(){
             <div className = "cards_container">
             {/* data = {() => setModalData(CardInfo)} */}
                     <ul className = "cards_items">
-                        <CardItem onClick = {() => {setOpenPopup(true); setDialogData(null)}}  />
+                        <CardItem onClick = {() => {setOpenPopup(true); setDialogData(null);}}  />
                         {/* <Popup openPopup = {openPopup} setOpenPopup = {setOpenPopup} setModalData = {setModalData} modalData = {modalData}></Popup>   */}
                     </ul>
 

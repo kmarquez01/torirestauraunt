@@ -5,6 +5,7 @@ import { HiMenu } from "react-icons/hi"
 import { FaTimes } from "react-icons/fa"
 
 import React, {useState} from "react"
+import { ShopContextProvider } from "./contexts/shop-context";
 
 
 class Navigation extends React.Component{
@@ -30,9 +31,10 @@ class Navigation extends React.Component{
             <li><Link href="/Home"><button className = "navbut" >Home</button></Link></li>
             <li><Link href="/Menu"><button className = "navbut">Menu</button></Link></li>
             <li><Link href="/About"><button className = "navbut">About</button></Link></li>
-            {/* <li><Link href="/Cart"><button className = "navbut">Cart</button></Link></li> */}
+            <li><Link href="/Cart"><button className = "navbut">Cart</button></Link></li>
         </div>
         return (
+            
             <div className ="nav">
             <div className = "container flex">
                 <h1 className ="logo">
@@ -50,6 +52,7 @@ class Navigation extends React.Component{
                 </nav>
             </div>
         </div>
+      
         ) 
     }
 }

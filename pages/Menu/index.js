@@ -6,9 +6,10 @@ import { ShopContextProvider } from "../../contexts/shop-context"
 function Menus(){
     return(
         <div>
-            <ShopContextProvider>
+    
+            {/* <ShopContextProvider> */}
             <Cards />
-            </ShopContextProvider>
+            {/* </ShopContextProvider> */}
         </div>
     )
 }
