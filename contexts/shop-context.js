@@ -39,6 +39,10 @@ export const ShopContextProvider = (props) => {
         return totalAmount;
     }
 
+    // const cartTotal = () => {
+    //     cartItems[item]
+    // }
+
     const contextValue = {cartItems, addToCart, removeFromCart, totalCartAmount}
 
     console.log(cartItems)

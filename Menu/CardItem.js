@@ -131,7 +131,7 @@ function CardItem(props){
                   </button>
                </div>
                <div className = "addcart">
-                   <button className = "cartbutton" onClick = {() => {addToCart(dialogData.id, counter); setOpenPopup(false); setCounter(0);}}>
+                   <button className = "cartbutton" onClick = {() => {addToCart(dialogData.id, counter); setOpenPopup(false); setCounter(0); setPrice(0)}}>
                     Add to cart {cartItemAmount >  0 && <> ({cartItemAmount})</>}
                     </button>
             
