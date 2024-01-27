@@ -18,11 +18,11 @@ function Navigation(){
    const [state, setState] = useState(false)
    const [numberClicked, setNumberClicked] = useState(false)
 
-   const {addToCart, cartItems, removeFromCart, totalCartAmount, getDefault} = useContext(ShopContext)
+   const {cartTotal} = useContext(ShopContext)
 
 //    const cartItemAmount = useState(cartItems[CardInfo.id])
 
-   const totalAmount = totalCartAmount()
+   const totalAmount = cartTotal()
 
 
    const object = 
@@ -55,10 +55,11 @@ function Navigation(){
                     </h1>
                 
                 <nav className = "navigation-bar">
-                    <div className = "shopping-cart-container">
-                    <Link href="/Cart"><FiShoppingCart className = "shopping-cart" /></Link>
-                        <div className = "cart-added">{console.log(totalAmount)}</div>
-                    </div>
+                    <Link href="/Cart"><div className = "shopping-cart-container">
+                        <FiShoppingCart className = "shopping-cart" />
+                            <div className = "cart-added">{(totalAmount)}</div>
+                        </div>
+                    </Link>
                     <ul>
                         {state === true ? object: ''}
 
