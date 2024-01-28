@@ -63,26 +63,25 @@ function Cart(props){
                     </div>
                 </div>
                 <div className = "order-summary">
-                    <div className = "order-summary-container">
-                        <h1 className = "cart-header">Order Summary</h1>
-                        <div className = "subtotal-container">
-                            Subtotal : C${totalAmount.toFixed(2)}
-                        </div>
-                        <div className = "tax-container">
-                            GST: C${(totalAmount * 0.05).toFixed(2)}
-                        </div>
-                        <div className = "tax-container">
-                            PST : C${(totalAmount * 0.07).toFixed(2)}
-                        </div>
-                        <div className = "total-container">
-                            Total : C${((totalAmount * 0.07) + (totalAmount * 0.05) + totalAmount).toFixed(2)}
-                        </div>
-                        <button className = "checkout" >
-                        Checkout
-                        </button>
+                        <div className = "order-summary-container">
+                            <h1 className = "cart-header">Order Summary</h1>
+                            <div className = "subtotal-container">
+                                Subtotal : C${totalAmount.toFixed(2)}
+                            </div>
+                            <div className = "tax-container">
+                                GST: C${(totalAmount * 0.05).toFixed(2)}
+                            </div>
+                            <div className = "tax-container">
+                                PST : C${(totalAmount * 0.07).toFixed(2)}
+                            </div>
+                            <div className = "total-container">
+                                Total : C${((totalAmount * 0.07) + (totalAmount * 0.05) + totalAmount).toFixed(2)}
+                            </div>
+                            <button className = "checkout" >
+                            Checkout
+                            </button>
+                        </div>   
                     </div>
-                    
-                </div>
             </div>
         </div>
     )

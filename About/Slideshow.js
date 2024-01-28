@@ -47,27 +47,27 @@ if (!Array.isArray(slides) || slides.length <= 0){
     return null;
 }
 
-// const  delay = 5000;
+const  delay = 5000;
 
-// console.log(animationActive);
+console.log(animationActive);
 
-// React.useEffect(() => {
-//     if(animationActive === true){   
-//     setTimeout(
-//       () =>
-//         setNew((prevIndex) =>
-//           prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-//         ),
-//       delay
-//     );
+React.useEffect(() => {
+    if(animationActive === true){   
+    setTimeout(
+      () =>
+        setNew((prevIndex) =>
+          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+        ),
+      delay
+    );
 
-//     // return () => {};  
-// }
-// else{
+    // return () => {};  
+}
+else{
     
-//     {   clearTimeout(delay, 0)  }
-// }
-//     }, [current])
+    {   clearTimeout(delay, 0)  }
+}
+    }, [current])
 
 
         

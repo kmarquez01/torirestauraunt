@@ -4,7 +4,7 @@ import { HiMenu } from "react-icons/hi"
 
 import { FaTimes } from "react-icons/fa"
 
-import React, {useState} from "react"
+import React, {useState, useEffect, useRef} from "react"
 import { FiShoppingCart } from "react-icons/fi";
 import { ShopContext } from "./contexts/shop-context"
 import {useContext} from "react"
@@ -13,7 +13,6 @@ import CardInfo from "./Menu/CardInfo";
 
 function Navigation(){
 
-    
 
    const [state, setState] = useState(false)
    const [numberClicked, setNumberClicked] = useState(false)
@@ -23,6 +22,21 @@ function Navigation(){
 //    const cartItemAmount = useState(cartItems[CardInfo.id])
 
    const totalAmount = cartTotal()
+
+   let sideRef = useRef();
+
+    useEffect(() => {
+        let mouseChecker = (e) =>{
+            if(!sideRef.current.contains(e.target)){
+                setState(false)
+            }
+        }
+        document.addEventListener("mousedown", mouseChecker);
+
+        return() => {
+        document.removeEventListener("mousedown" , mouseChecker)
+        }
+    })
 
 
    const object = 
@@ -42,13 +56,13 @@ function Navigation(){
         else{
         setState(false)
         }
-        return object
-    }
+       
+    }   
 
     
     return(
                
-            <div className ="nav">
+            <div className ="nav" ref = {sideRef}>
             <div className = "container flex">
                 <h1 className ="logo">
                     <Link href = "/Home"><button className = "logo">Lafu</button></Link>

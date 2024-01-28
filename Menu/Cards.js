@@ -22,7 +22,7 @@ function Cards(){
         <Navigation />
         <div className = "cards">
     
-            <h1>Menu</h1>
+            <h1 className = "menu-title">Menu</h1>
             <div className = "cards_container">
             {/* data = {() => setModalData(CardInfo)} */}
                     <ul className = "cards_items">
