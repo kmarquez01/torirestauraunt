@@ -1025,7 +1025,7 @@ h1 {
 
 .cart_item{
   display: grid;
-  grid-template-columns: 225px 300px 300px;
+  grid-template-columns: repeat(auto-fill, 33% 33% 34%);
   justify-items: start;
   align-items: center;
   justify-content: center;
@@ -1038,10 +1038,18 @@ h1 {
 
 }
 
-.cart-items{
+/* .cart-items{
   display: flex;
   height: 100%;
   flex-direction: column;
+  justify-content: space-around;
+} */
+
+.cart_item_link{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .cart-section{
@@ -1054,6 +1062,8 @@ h1 {
 
 .cart-container{
   margin: 50px;
+  height: 100%;
+  width:100%;
 }
 
 .image_holder{
@@ -1073,7 +1083,8 @@ h1 {
 
 .cart-header-container{
   display: grid;
-  grid-template-columns: 300px 300px 230px;
+  grid-template-rows: none;
+  grid-template-columns: repeat(auto-fill, 50% 50%);
 }
 
 .cart-header{
@@ -1088,8 +1099,14 @@ h1 {
 }
 
 .carts_item_wrap{
+  width: 100%;
+  display: flex;
+  text-align: center;
   font-size: 24px;
   font-weight: 400;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .count-container{
@@ -1114,13 +1131,14 @@ h1 {
 
 .change-counter{
   display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    font-size: larger;
-    border: none;
-    border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font-size: larger;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .cart-subtotal{
@@ -1139,9 +1157,14 @@ h1 {
   width: 100%;
   height: 100%;
   display: flex;
-  font-weight:600;
-  /* align-items: end; */
-  justify-content: flex-end;
+  font-weight: 600;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.trash-item{
+  cursor:pointer
 }
 
 .price{
@@ -1165,11 +1188,18 @@ h1 {
 
 }
 
+.empty-cart-disclaimer{
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+}
+
 .order-summary{
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .subtotal-container{
@@ -1180,6 +1210,23 @@ h1 {
   border-left-style: none;
   border-right-style: none;
   border-bottom-style: none;
+}
+
+.subtotal-footer-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.trash-container{
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  padding-left: 25px;
+  text-align: end;
+  font-weight: 400;
+  justify-content: flex-start;
+  align-items: center;
+  cursor:pointer;
 }
 
 .tax-container{
@@ -1220,7 +1267,7 @@ h1 {
   font-family: sans-serif;
   font-size: 24px;
   cursor: pointer;
-  background-color: transparent;
+  background-color: #C0C0C0;
   color: black;
 }
 
@@ -1356,6 +1403,19 @@ h1 {
 
   .cards_item{
     margin-bottom: 2rem;
+  }
+
+  .cart-page-sections{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: none;
+    gap: 10%;
+  }
+
+  .order-summary{
+    align-items: center;
   }
 
 }

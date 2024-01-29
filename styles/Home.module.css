@@ -279,13 +279,13 @@ background-color: #f6752a;
   }
   
   .footer_link_wrapper {
+    width: 100%;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 225px 250px 250px;
-    justify-items: center;
-    justify-content: center;
+    /* grid-template-columns: 225px 250px 250px; */
     align-items: start;
     font-size: 18px;
+    justify-content: space-between;
     
   }
   
@@ -380,11 +380,17 @@ background-color: #f6752a;
   
   @media screen and (max-width: 800px) {
 
-    .title{
-  
+    .footer_link_wrapper{
+      grid-template-rows: repeat(auto-fill, 25%);
+      grid-auto-flow:row;
+      justify-content: center;
     }
     .footer-links {
       padding-top: 2rem;
+    }
+
+    .footer-link-items{
+      align-items: center;
     }
   
     .footer-input {

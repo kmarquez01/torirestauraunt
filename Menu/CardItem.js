@@ -119,7 +119,7 @@ function CardItem(props){
                 </div>
 
                 <div className = "subprice-1">
-                    { "$" + dialogData.price}
+                    { "C$" + dialogData.price.toFixed(2)}
                 </div>
               
             </div>
@@ -131,7 +131,7 @@ function CardItem(props){
                 </div>
 
                 <div className = "subprice">
-                  {"$" + price}
+                  {"C$" + price.toFixed(2)}
                 </div>
 
                 

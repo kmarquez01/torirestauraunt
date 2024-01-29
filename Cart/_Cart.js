@@ -3,14 +3,30 @@ import {useContext} from "react"
 import CardInfo from "../Menu/CardInfo"
 import CartItem from "./cart-item"
 import { ShopContext } from "../contexts/shop-context"
+import { FaTrash } from "react-icons/fa";
 
 
 function Cart(props){
 
     const {handleSubtract, handleAdd, cartItemAmount} = props
-    const {addToCart, cartItems, removeFromCart, totalCartAmount} = useContext(ShopContext)
+    const {addToCart, cartItems, removeFromCart, totalCartAmount, emptyCart, emptyItem} = useContext(ShopContext)
 
     const totalAmount = totalCartAmount()
+
+    const cartStyle = {
+        display: "flex",
+        height: "100%",
+        flexDirection: "column",
+    }
+
+    const cartStyleEmpty = {
+        display: "flex",
+        height: "100%",
+        flexDirection: "column",
+        justifyContent: "space-around"
+    }
+
+
     return(
         <div className = "cart-page">
             <div className = "cart-page-sections">
@@ -18,11 +34,16 @@ function Cart(props){
                     <div className = "cart-container">
                         <div className = "cart-header-container">
                             <h1 className = "cart-header">Cart</h1>
-                            <div></div>
                             <div className = "price">Price</div>
                         </div>     
-                        <div className = "cart-items">
-                            {CardInfo.map((item) => {
+                        <div className = "cart-items" style = {totalAmount === 0 ? cartStyleEmpty : cartStyle}>
+                        {totalAmount === 0 ? (
+                            <div className = "empty-cart-disclaimer">
+                                Your cart is empty
+                            </div>
+                        )
+                        : (
+                            CardInfo.map((item) => {
                                 if (cartItems[item.id] !== 0){
                                     return ( 
                                     <div className = "cart_holder">          
@@ -48,16 +69,26 @@ function Cart(props){
                                             </div>
                                             <div className = "item-price">
                                                 C${item.price.toFixed(2)}
+                                                <div className = "trash-item">
+                                                    <FaTrash onClick = {() => emptyItem(item.id)} />
+                                                </div>
                                             </div>
+                                            
                                         </li>
                             
                                     </div>
                                     
                                     )
                                 }
-                            })}
-                            <div className = "cart-subtotal">
-                                Subtotal: {(totalAmount) === 0 ? "Your cart is empty" : <div className = "subtotal">C${totalAmount.toFixed(2)}</div>}
+                            }))}
+                            <div className = "subtotal-footer-container">
+                                <div className = "trash-container">
+                                    Empty Cart
+                                    <FaTrash onClick = {emptyCart} />
+                                </div>
+                                <div className = "cart-subtotal">
+                                    Subtotal: {(totalAmount) === 0 ? "Your cart is empty" : <div className = "subtotal">C${totalAmount.toFixed(2)}</div>}
+                                </div>
                             </div>
                         </div>
                     </div>
