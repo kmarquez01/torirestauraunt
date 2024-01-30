@@ -43,14 +43,16 @@ function Footer(){
                 <Link href="/">Youtube</Link>
               </div>
               <div className={styles.footer_link_items}>
-                <h2>Opening Hours</h2>
-                <p>Sunday: Closed</p>
-                <p>Monday: 8:00am - 11:00pm</p>
-                <p>Tuesday: 8:00am - 11:00pm</p>
-                <p>Wednesday: 8:00am - 11:00pm</p>
-                <p>Thursday: 8:00am - 11:00pm</p>
-                <p>Friday: 8:00am - 12:00am</p>
-                <p>Saturday: Closed</p>
+                  <h2>Opening Hours</h2>
+                  {/* <div className = "footer-information"> */}
+                    <p>Sunday: Closed</p>
+                    <p>Monday: 8:00am - 11:00pm</p>
+                    <p>Tuesday: 8:00am - 11:00pm</p>
+                    <p>Wednesday: 8:00am - 11:00pm</p>
+                    <p>Thursday: 8:00am - 11:00pm</p>
+                    <p>Friday: 8:00am - 12:00am</p>
+                    <p>Saturday: Closed</p>
+                  {/* </div> */}
               </div>
             </div>
           </div>
