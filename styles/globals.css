@@ -737,10 +737,7 @@ h1 {
     font-style: italic;
     font-weight: 300;
     font-family: sans-serif;
-}
-
-.about-txt-wrapper{
-  width: 100%;
+    width: 100%;
 }
 
 .aboutcon{
@@ -749,10 +746,10 @@ h1 {
 
 .quote{
   text-align: center;
-    padding: 84px;
-    opacity: 90%;
-    background-color: black;
-    border-radius: 10px;
+  padding: 2em;
+  opacity: 90%;
+  background-color: black;
+  border-radius: 10px;
 }
 
 .aboutus-container{
@@ -902,8 +899,8 @@ h1 {
 
 .map{
 
-  width:50%;
-  height:500px;
+  width: 50vw;
+  height: 50vh;
 
 }
 
@@ -1359,6 +1356,7 @@ h1 {
     padding-top: 10px;
     /* top: 0;
     height: 100%; */ 
+    justify-content: center;
   }
 
   .slide-active{
@@ -1372,7 +1370,7 @@ h1 {
   .aboutus-container{
     margin:0 auto;
     width:100%;
-    padding-bottom: 150px;
+
   }
   .aboutus-p{
     position: static;
