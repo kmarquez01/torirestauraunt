@@ -10,7 +10,7 @@ function Footer(){
 
     return (
       <div className='footer-container'>
-          <section className='footer-subscription'>
+          <section className= {styles.footer_subscription}>
             <div className ={styles.footer_subscription_box}>
             <p>
               Keep in touch with future updates and coupons!
@@ -30,19 +30,19 @@ function Footer(){
           <div className='footer-links'>
             {/* <div className='footer-link-wrapper'> */}
             <div className= {styles.footer_link_wrapper}> 
-              <div className='footer-link-items'>
+              <div className={styles.footer_link_items}>
                 <h2>About Us</h2>
                 <Link href="About/#WhoWeAre">Who we are</Link>
                 <Link href = "About/#Locations" >Locations</Link>
                 <Link href="About/#contact">Contact</Link>
               </div>
-              <div className='footer-link-items'>
+              <div className={styles.footer_link_items}>
                 <h2>Social Media</h2>
                 <Link href="/">Instagram</Link>
                 <Link href="/">Facebook</Link>
                 <Link href="/">Youtube</Link>
               </div>
-              <div className='footer-link-items'>
+              <div className={styles.footer_link_items}>
                 <h2>Opening Hours</h2>
                 <p>Sunday: Closed</p>
                 <p>Monday: 8:00am - 11:00pm</p>

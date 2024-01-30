@@ -35,19 +35,21 @@ function MainContent(){
             </div>
 
             <div className = "showcase-form card" >
-                <h2>Request an Item</h2>
-                <form>
-                    <div className = "form">
-                        <input type = "text" name = "name" placeholder = "Name" required></input>
-                    </div>
-                    <div className ="form">
-                        <input type = "text" name = "company" placeholder = "Short description" required></input>
-                    </div>
-                    <div className ="form">
-                        <input type = "text" name = "email" placeholder = "Email" required></input>
-                    </div>
-                    <input type ="submit" value ="Send" className = {styles.btn}></input>
-                </form>
+                <div className = "showcase-form-container">
+                    <h2>Request an Item</h2>
+                    <form>
+                        <div className = "form">
+                            <input type = "text" name = "name" placeholder = "Name" required></input>
+                        </div>
+                        <div className ="form">
+                            <input type = "text" name = "company" placeholder = "Short description" required></input>
+                        </div>
+                        <div className ="form">
+                            <input type = "text" name = "email" placeholder = "Email" required></input>
+                        </div>
+                        <input type ="submit" value ="Send" className = {styles.btn}></input>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
