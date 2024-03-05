@@ -81,7 +81,7 @@ function CardItem(props){
           {CardInfo.map(item => (
             // return (
               <li className = "cards_item" key={item.id} onClick = {props.onClick}>
-                <button className = "cards_item_link">
+                <button className = "cards_item_link" onClick = {() => {setDialogData(item); setOpenPopup(true);  setCartItemAmount(cartItems[item.id])}}>
                   <div className = "cont1">
                       {/* <figure className = "cards_item_picwrap" data-category = {item.name}> */}
                     <h1 className = "cards_item_wrap">{item.name}</h1>
@@ -100,69 +100,74 @@ function CardItem(props){
    
       // (firstState === true ? ( () => setCounter(0) && setPrice(0)) : "" ) &&
 
-          <Dialog className = "dialogue-box-container" open = {openPopup} >
-         
-          <DialogTitle>
-              <div className = "header-popout">
-                  Price
-                   <FaTimes className = "close" onClick = {() => {setOpenPopup(false); setCounter(0); setPrice(0);}}>
-                   </FaTimes>
-              </div>
-          </DialogTitle>
-          
-          <DialogContent> 
-          <div className = "dialog-content-container">
-            <div className = "fooditem">
-
-                <div className = "fooditemsub">
-                    {dialogData.name} {"..."}
-                </div>
-
-                <div className = "subprice-1">
-                    { "C$" + dialogData.price.toFixed(2)}
-                </div>
-              
+          <Dialog open = {openPopup} >
+          <div className = "dialogue-box-container">
+            <div className = "side-image">
+              <img src = {dialogData.image} alt = "Image" className = "side-image"></img>
             </div>
 
-            <div className = "fooditem">
-
-                <div className = "fooditemsub">
-                    {"Total"}  {"..."}
-                </div>
-
-                <div className = "subprice">
-                  {"C$" + price.toFixed(2)}
-                </div>
-
-                
-            </div>
-
-            <div className = "enticement">
-              Add to your cart and order for pick up!
-            </div>
-
-          </div>
-             
-        
-              <div className = "countmain">
-                  <button className = "count" onClick = {handleSubtract}>
-                      -
-                  </button>
-                  <div className = "countsub">
-                  {counter}
+            <div className = "side-info">
+              <DialogTitle>
+                  <div className = "header-popout">
+                      Price
+                      <FaTimes className = "close" onClick = {() => {setOpenPopup(false); setCounter(0); setPrice(0);}}>
+                      </FaTimes>
                   </div>
-                  <button className = "count" onClick = {handleAdd}>
-                      +
-                  </button>
-               </div>
-               <div className = "addcart">
-                   <button className = "cartbutton" onClick = {() => { {counter === 0 ? setOpenPopup(true) : setOpenPopup(false)}; addToCart(dialogData.id, counter); setCounter(0); setPrice(0)}}>
-                    Add to cart {cartItemAmount >  0 && <> ({cartItemAmount})</>}
-                    </button>
-            
+              </DialogTitle>
+              
+              <DialogContent> 
+              <div className = "dialog-content-container">
+                <div className = "fooditem">
+
+                    <div className = "fooditemsub">
+                        {dialogData.name} {"..."}
+                    </div>
+
+                    <div className = "subprice-1">
+                        { "C$" + dialogData.price.toFixed(2)}
+                    </div>
+                  
+                </div>
+
+                <div className = "fooditem">
+
+                    <div className = "fooditemsub">
+                        {"Total"}  {"..."}
+                    </div>
+
+                    <div className = "subprice">
+                      {"C$" + price.toFixed(2)}
+                    </div>
+
+                    
+                </div>
+
               </div>
-          </DialogContent>
-          
+                
+            
+                  <div className = "countmain">
+                      <button className = "count" onClick = {handleSubtract}>
+                          -
+                      </button>
+                      <div className = "countsub">
+                      {counter}
+                      </div>
+                      <button className = "count" onClick = {handleAdd}>
+                          +
+                      </button>
+                  </div>
+                  <div className = "enticement">
+                      Add to your cart and order for pick up!
+                  </div>
+                  <div className = "addcart">
+                      <button className = "cartbutton" onClick = {() => { {counter === 0 ? setOpenPopup(true) : setOpenPopup(false)}; addToCart(dialogData.id, counter); setCounter(0); setPrice(0)}}>
+                        Add to cart {cartItemAmount >  0 && <> ({cartItemAmount})</>}
+                        </button>
+                
+                  </div>
+              </DialogContent>
+            </div>
+          </div>
       </Dialog> 
       
        ) : ""}

@@ -14,7 +14,7 @@ function Cart(props){
     const totalAmount = totalCartAmount()
 
     const cartStyle = {
-        display: "flex",
+        // display: "flex",
         height: "100%",
         flexDirection: "column",
     }
@@ -26,6 +26,24 @@ function Cart(props){
         justifyContent: "space-around"
     }
 
+    const cartStyleOneItem = {
+       
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, 33% 33% 34%)",
+        justifyItems: "start",
+        alignItems: "center",
+        justifyContent: "center",
+        borderStyle: "groove",
+        borderLeftStyle: "none",
+        borderRightStyle: "none",
+        borderBottomStyle: "groove",
+        paddingTop: "20px",
+        paddingBottom: "20px",
+        borderWidth: "2px"
+          
+         
+    }
+
 
     return(
         <div className = "cart-page">
@@ -33,63 +51,64 @@ function Cart(props){
                 <div className = "cart-section">
                     <div className = "cart-container">
                         <div className = "cart-header-container">
-                            <h1 className = "cart-header">Cart</h1>
-                            <div className = "price">Price</div>
-                        </div>     
+                                <h1 className = "cart-header">Cart</h1>
+                                <div className = "price">Price</div>
+                        </div> 
                         <div className = "cart-items" style = {totalAmount === 0 ? cartStyleEmpty : cartStyle}>
                         {totalAmount === 0 ? (
                             <div className = "empty-cart-disclaimer">
                                 Your cart is empty
                             </div>
                         )
-                        : (
+                        :  (
                             CardInfo.map((item) => {
                                 if (cartItems[item.id] !== 0){
                                     return ( 
-                                    <div className = "cart_holder">          
-                                        <li className = "cart_item" key={item.id}>
-                                            <div className = "cart_item_link">
-                                                <div className = "image_holder">            
-                                                    <img src={item.image} alt = "Image" className = "carts-item-img"/>
-                                                </div>
-                                            </div>
-                                            <div className = "details-container">
-                                                <h1 className = "carts_item_wrap">{item.name}</h1>
-                                                <div className = "count-container">
-                                                    <button className = "change-counter" onClick = {() => removeFromCart(item.id, 1)}>
-                                                        -
-                                                    </button>
-                                                    <div className = "count-tracker">
-                                                        {cartItems[item.id]}
+                                    <>
+                                    
+                                        <div className = "cart_holder">          
+                                            <li className = "cart_item" key={item.id} style = {totalAmount === 1 ? cartStyleOneItem : cartStyle}>
+                                                <div className = "cart_item_link">
+                                                    <div className = "image_holder">            
+                                                        <img src={item.image} alt = "Image" className = "carts-item-img"/>
                                                     </div>
-                                                    <button className = "change-counter" onClick = {() => addToCart(item.id, 1)}>
-                                                        +
-                                                    </button>
                                                 </div>
-                                            </div>
-                                            <div className = "item-price">
-                                                C${item.price.toFixed(2)}
-                                                <div className = "trash-item">
-                                                    <FaTrash onClick = {() => emptyItem(item.id)} />
+                                                <div className = "details-container">
+                                                    <h1 className = "carts_item_wrap">{item.name}</h1>
+                                                    <div className = "count-container">
+                                                        <button className = "change-counter" onClick = {() => removeFromCart(item.id, 1)}>
+                                                            -
+                                                        </button>
+                                                        <div className = "count-tracker">
+                                                            {cartItems[item.id]}
+                                                        </div>
+                                                        <button className = "change-counter" onClick = {() => addToCart(item.id, 1)}>
+                                                            +
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            
-                                        </li>
-                            
-                                    </div>
+                                                <div className = "item-price">
+                                                    C${item.price.toFixed(2)}
+                                                    <div className = "trash-item">
+                                                        <FaTrash onClick = {() => emptyItem(item.id)} />
+                                                    </div>
+                                                </div>
+                                                
+                                            </li>                  
+                                        </div>
+                                    </>
+                                    
                                     
                                     )
                                 }
                             }))}
                             <div className = "subtotal-footer-container">
                                 <div className = "trash-container">
-                                    Empty Cart
-                                    <FaTrash onClick = {emptyCart} />
+                                        Empty Cart
+                                        <FaTrash onClick = {emptyCart} />
                                 </div>
-                                <div className = "cart-subtotal">
-                                    Subtotal: {(totalAmount) === 0 ? "Your cart is empty" : <div className = "subtotal">C${totalAmount.toFixed(2)}</div>}
-                                </div>
-                            </div>
+                            </div> 
+                            
                         </div>
                     </div>
                 </div>
