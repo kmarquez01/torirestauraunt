@@ -4,7 +4,7 @@ import CardInfo from "../Menu/CardInfo"
 import CartItem from "./cart-item"
 import { ShopContext } from "../contexts/shop-context"
 import { FaTrash } from "react-icons/fa";
-
+import  Link  from 'next/link'
 
 function Cart(props){
 
@@ -56,9 +56,18 @@ function Cart(props){
                         </div> 
                         <div className = "cart-items" style = {totalAmount === 0 ? cartStyleEmpty : cartStyle}>
                         {totalAmount === 0 ? (
+                            <>
                             <div className = "empty-cart-disclaimer">
-                                Your cart is empty
+                                Cart is empty
+                                <div class = "continue">
+                                    <Link href = "/Menu">
+                                        Continue Browsing
+                                    </Link>
+                                </div>
                             </div>
+                           
+                            </>
+                    
                         )
                         :  (
                             CardInfo.map((item) => {
