@@ -720,7 +720,7 @@ h1 {
 .enticement{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   font-weight: 600;
   margin: 10px;
   border-style: groove;

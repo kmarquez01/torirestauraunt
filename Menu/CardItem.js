@@ -108,7 +108,7 @@ function CardItem(props){
 
             <div className = "side-info">
               <div className = "side-info-sub">
-                <DialogTitle style = {{paddingLeft: "0px", paddingTop: "10px"}}>
+                <DialogTitle style = {{paddingLeft: "0px", paddingTop: "20px"}}>
                     <div className = "header-popout">
                         Price
                         <FaTimes className = "close" onClick = {() => {setOpenPopup(false); setCounter(0); setPrice(0);}}>
@@ -116,7 +116,7 @@ function CardItem(props){
                     </div>
                 </DialogTitle>
                 
-                <DialogContent style = {{display: "flex", paddingLeft: "10px", gap: "60px", flexDirection: "column"}}> 
+                <DialogContent style = {{display: "flex", paddingLeft: "10px", gap: "50px", flexDirection: "column"}}> 
                 <div className = "dialog-content-container">
                   <div className = "fooditem">
 
