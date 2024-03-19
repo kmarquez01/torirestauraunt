@@ -62,12 +62,12 @@ function Footer(){
               <div className='footer-logo'>
                 <Link href="/" className='social-logo'>
                   <div className = "social-logo">
-                    Lafu
+                    Tori
                     <i className='fab fa-typo3' />
                   </div>
                 </Link>
               </div>
-              <small className='website-rights'>Lafu © 2020</small>
+              <small className='website-rights'>Tori © 2024</small>
             </div>
           </section>
       </div>

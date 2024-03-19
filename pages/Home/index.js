@@ -12,8 +12,11 @@ import {motion} from "framer-motion"
 
 import {FaToriiGate} from "react-icons/fa"
 
+// import "../Home/index.css"
+
 
 function Homes(){
+
     return(
         <div className = {styles.container0}>
             <Navigation />
@@ -24,24 +27,84 @@ function Homes(){
                </video>
                </div>
                 <div className = {styles.introcontainer}>
-                <motion.div initial = "hidden" animate = "visible" variants = {{
+                <motion.div className = {styles.introSubcontainer} initial = "hidden" animate = "visible" 
+                variants = {{
                     hidden: {
-                        scale: .8,
+                        // scale: .8,
                         opacity: 0
                     },
                     visible: {
-                        scale: 1,
+                        // scale: 1,
                         opacity: 1,
                         transition: {
                             duration: 1
                         }
                     }
                 }}>
-                    <h1 className = {styles.title}>Where food cravings are satisfied!</h1>
+
+                    <div className = {styles.landingContainer}>
+                        <motion.div 
+                        className = {styles.circle}
+                        initial = "hidden"
+                        animate = "visible"
+                        variants = {{
+                            hidden: {
+                                left: 'auto'
+                            },
+                            visible: {
+                                left: '0px',
+                                transition: {duration: 1.1}
+                            }
+                        }}>
+                            <i className = {styles.gate}><FaToriiGate /></i>
+                        </motion.div>
+                        
+                        <div className = {styles.linkingContainer}>
+                            <motion.h1 
+                            className = {styles.title}
+                            initial = "hidden"
+                            animate = "visible"
+                            variants = {{
+                                hidden: {
+                                    left: '-1000px'
+                                },
+                                visible: {
+                                    left: '0px',
+                                    transition: {
+                                        duration: 1.1,
+                                        delay: 1.1
+                                    }
+                                }
+                            }}
+                            >Where food cravings are satisfied!
+                            </motion.h1>
+                            <div className = {styles.extra}>
+                            <Link href = "/Menu">
+                                <motion.button 
+                                className = {styles.button}
+                                initial = "hidden"
+                                animate = "visible"
+                                variants = {{
+                                    hidden: {
+                                        opacity: 0,
+                                        left: '0px'
+                                    },
+                                    visible: {
+                                        opacity: 1,
+                                        left: '0px',
+                                        transition: {
+                                            duration: 1.1,
+                                            delay: 2.3
+                                        }
+                                    }
+                                }}>
+                                    Menu
+                                </motion.button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
                 </motion.div>
-                <div className = {styles.circle}>
-                    <i className = {styles.gate}><FaToriiGate /></i>
-                </div>
 
 
                 <motion.div initial = "hidden" animate = "visible" variants = {{
@@ -57,11 +120,6 @@ function Homes(){
                         }
                     }
                 }}>
-                <div className = {styles.extra}>
-                    <Link href = "/Menu">
-                        <button className = {styles.button}>Menu</button>
-                    </Link>
-                </div>
                  </motion.div>
                 </div>
             </section>

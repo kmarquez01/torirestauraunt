@@ -5,7 +5,8 @@ import { HiMenu } from "react-icons/hi"
 import { FaTimes } from "react-icons/fa"
 
 import React, {useState, useEffect, useRef} from "react"
-import { FiShoppingCart } from "react-icons/fi";
+import { FiShoppingCart} from "react-icons/fi";
+import { FaToriiGate } from "react-icons/fa";
 import { ShopContext } from "./contexts/shop-context"
 import {useContext} from "react"
 import CardInfo from "./Menu/CardInfo";
@@ -64,10 +65,20 @@ function Navigation(){
                
             <div className ="nav" ref = {sideRef}>
             <div className = "container flex">
-                <h1 className ="logo">
-                    <Link href = "/Home"><button className = "logo">Lafu</button></Link>
+            <Link href = "/Home">
+                <button className = "logo">
+                <div className = "logo-container">
+                    <div className = "circle">
+                        <div className = "gate">
+                            <FaToriiGate />
+                        </div>
+                    </div>
+                    <h1 className ="logo">
+                        Tori
                     </h1>
-                
+                </div>
+                </button>
+                </Link>
                 <nav className = "navigation-bar">
                     <Link href="/Cart"><div className = "shopping-cart-container">
                         <FiShoppingCart className = "shopping-cart" />
