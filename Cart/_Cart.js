@@ -136,9 +136,11 @@ function Cart(props){
                             <div className = "total-container">
                                 Total : C${((totalAmount * 0.07) + (totalAmount * 0.05) + totalAmount).toFixed(2)}
                             </div>
-                            <button className = "checkout" >
-                            Checkout
-                            </button>
+                            <Link href="/Home" className= "link-wrap">
+                                <button className = "checkout" >
+                                Checkout
+                                </button>
+                            </Link>
                         </div>   
                     </div>
             </div>

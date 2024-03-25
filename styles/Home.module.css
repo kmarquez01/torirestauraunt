@@ -92,7 +92,7 @@ background-color: #f6752a;
 .introSubcontainer{
   position: relative;
   overflow: hidden;
-  max-width: 50em;
+  max-width: 60em;
   width: 100%;
 }
 
@@ -400,7 +400,7 @@ background-color: #f6752a;
   .linkingContainer{
     text-wrap: nowrap;
     overflow: hidden;
-    max-width: 45rem;
+    max-width: 58rem;
     width: 100%;
   }
   
