@@ -16,7 +16,7 @@ function Locations(){
                         </ul>
                     </div>
                     <div className = "map-container">
-                        <iframe className = "map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2609.303838770957!2d-122.78135358408065!3d49.15684078759952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d0b1ccc41d6b%3A0xeb1d67eaa14c6dfb!2sSunny%20Dragon%20Korean%20and%20Japanese%20Restaurant!5e0!3m2!1sen!2sca!4v1620768312200!5m2!1sen!2sca" ></iframe>
+                        <iframe className = "map" src= "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1633.7254895727554!2d135.72232656679526!3d35.020446179528186!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010799ea663f23%3A0x1b9362c78b8f2434!2zSmFwYW4sIOOAkjYxNi04MDU3IEt5b3RvLCBVa3lvIFdhcmQsIEhhbmF6b25va2l0c3VqaW1pbmFtaWNoxY0sIDctMTMg44K344Or44Kv6KW_6Zmj!5e0!3m2!1sen!2sca!4v1711488076813!5m2!1sen!2sca"></iframe>
                     </div>
                 </div>
             {/* </div> */}
