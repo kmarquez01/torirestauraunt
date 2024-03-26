@@ -11,7 +11,12 @@ import {useContext, useState, useRef, useEffect} from "react"
 import {Dialog, DialogTitle, DialogContent, Card} from "@mui/material"
 
 import { FaTimes } from "react-icons/fa"
+
 import { ShopContext } from "../contexts/shop-context";
+
+import { motion, useAnimation } from "framer-motion"
+
+import { useInView } from 'react-intersection-observer';
 
 
 
@@ -50,6 +55,15 @@ function CardItem(props){
   //     }
   // })
 
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+      if (inView) {
+        controls.start('visible');
+      }
+    }, [controls, inView]);
+
     const handleAdd = () => {
   
         setCounter(counter + 1)
@@ -80,7 +94,22 @@ function CardItem(props){
       <div className = "card_holder">
           {CardInfo.map(item => (
             // return (
-              <li className = "cards_item" key={item.id} onClick = {props.onClick}>
+              <motion.li 
+              className = "cards_item" 
+              key={item.id} 
+              ref = {ref}
+              animate = {controls}
+              initial = "hidden"
+                variants ={{
+                    visible: {opacity: 1, top: "0", position: "relative"},
+                    hidden: {opacity: 0, top: "-1.25rem", position: "relative"}
+                }}
+                transition = {{
+                    ease: "easeInOut",
+                    delay: (item.id * 0.1),
+                    duration: 1
+                }}
+              onClick = {props.onClick}>
                 <button className = "cards_item_link" onClick = {() => {setDialogData(item); setOpenPopup(true);  setCartItemAmount(cartItems[item.id])}}>
                   <div className = "cont1">
                       {/* <figure className = "cards_item_picwrap" data-category = {item.name}> */}
@@ -92,7 +121,7 @@ function CardItem(props){
                     </div>
                   </div>
                 </button>
-              </li>
+              </motion.li>
             // );
           ))}
       </div>
