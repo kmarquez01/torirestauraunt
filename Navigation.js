@@ -55,7 +55,7 @@ function Navigation(){
             <li onClick = {() => { setState(false);}}><Link href="/Home"><button className = "navbut" >Home</button></Link></li>
             <li onClick = {() => { setState(false);}}><Link href="/Menu"><button className = "navbut">Menu</button></Link></li>
             <li onClick = {() => { setState(false);}} ><Link href="/About"><button className = "navbut">About</button></Link></li>
-            <li onClick = {() => { setState(false);}}><Link href="/Cart"><button className = "navbut">Contact</button></Link></li>
+            <li onClick = {() => { setState(false);}}><Link href="/Cart"><button className = "navbut">Cart</button></Link></li>
         </div>
 
 
