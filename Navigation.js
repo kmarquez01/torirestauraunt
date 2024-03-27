@@ -10,6 +10,7 @@ import { FaToriiGate } from "react-icons/fa";
 import { ShopContext } from "./contexts/shop-context"
 import {useContext} from "react"
 import CardInfo from "./Menu/CardInfo";
+import { useMediaQuery } from 'usehooks-ts'
 
 
 function Navigation(){
@@ -43,11 +44,20 @@ function Navigation(){
    const object = 
        
        <div className = "death">
-           <li><Link href="/Home"><button className = "navbut" >Home</button></Link></li>
-           <li><Link href="/Menu"><button className = "navbut">Menu</button></Link></li>
-           <li><Link href="/About"><button className = "navbut">About</button></Link></li>
-           <li><Link href="/Cart"><button className = "navbut">Cart</button></Link></li>
+           <li onClick = {() => { setState(false);}}><Link href="/Home"><button className = "navbut" >Home</button></Link></li>
+           <li onClick = {() => { setState(false);}}><Link href="/Menu"><button className = "navbut">Menu</button></Link></li>
+           <li onClick = {() => { setState(false);}}><Link href="/About"><button className = "navbut">About</button></Link></li>
+           <li onClick = {() => { setState(false);}}><Link href="/Cart"><button className = "navbut">Cart</button></Link></li>
        </div>
+
+    const webNav = 
+        <div className = "webnav-menu">
+            <li onClick = {() => { setState(false);}}><Link href="/Home"><button className = "navbut" >Home</button></Link></li>
+            <li onClick = {() => { setState(false);}}><Link href="/Menu"><button className = "navbut">About</button></Link></li>
+            <li onClick = {() => { setState(false);}} ><Link href="/About"><button className = "navbut">Portfolio</button></Link></li>
+            <li onClick = {() => { setState(false);}}><Link href="/Cart"><button className = "navbut">Contact</button></Link></li>
+        </div>
+
 
     const handleClick = () => {
         
@@ -59,6 +69,8 @@ function Navigation(){
         }
        
     }   
+
+    const isMobile = useMediaQuery('(max-width: 800px)')
 
     
     return(
@@ -86,12 +98,12 @@ function Navigation(){
                         </div>
                     </Link>
                     <ul>
-                        {state === true ? object: ''}
+                        {(!isMobile && state === false) ? webNav:
 
                         <button className = "sandwich" onClick = {handleClick}>
                             {state === true ? <FaTimes />: <HiMenu/>}
-                          
-                        </button>                
+                            {state === false ? '' : object}  
+                        </button>   }             
                     </ul>
                     
                 </nav>

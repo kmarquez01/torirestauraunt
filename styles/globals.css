@@ -104,6 +104,7 @@ img{
   /* padding: 10px;
   margin: 0 5px; */
   font-size: 20px;
+  position: relative;
 }
 
 .navbar a:hover{
@@ -115,8 +116,11 @@ img{
 }
 
 .navigation-bar{
-  display:flex;
-  gap: 15px;
+  height: 100%;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .shopping-cart-container{
@@ -140,8 +144,8 @@ img{
     width: 20px;
     color: black;
     position: absolute;
-    right: 85px;
-    top: 35px;
+    bottom: -5px;
+    right: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,14 +177,15 @@ img{
   font-size: 20px;
   cursor: pointer;
   background-color: transparent;
-  color: white;
+  color: #f6752a;
   width: 100%;
   gap: 20px;
-  padding: 20px 0;
+  padding: 10px;
 }
 
 .navbut:hover{
-  background-color:white;
+  width: 100%;
+  background-color:#f6752a;
   color: black;
 }
 
@@ -1089,7 +1094,6 @@ h1 {
 .cart-page{
   display: flex;
   align-items: center;
-  height: 100vh;
   width: 100%;
 }
 
@@ -1132,7 +1136,7 @@ h1 {
 }
 
 .cart-container{
-  margin: 50px;
+  margin: 4rem;
   height: 100%;
   width:100%;
 }
@@ -1347,7 +1351,7 @@ h1 {
 .order-summary-container{
   width: 75%;
   gap: 50px;
-  margin: 50px auto;
+  margin: 75px auto;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -1382,6 +1386,24 @@ h1 {
   color: white;
   }
 
+.webnav-menu{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-holder{
+  display: flex;
+  padding-inline-start: 0px;
+  flex-direction: row;
+  align-items: center;
+  padding-inline-start: 0px;
+  gap: 15px;
+
+}
 
 @media only screen and (max-width: 400px){
   .footer-link-wrapper{
@@ -1395,6 +1417,10 @@ h1 {
 @media only screen and (max-width: 800px){
   .showcase h1{
     text-align: center;
+  }
+
+  .navigation-bar{
+    gap: 1rem;
   }
 }
 

@@ -439,6 +439,7 @@ background-color: #f6752a;
 
     .circle{
       position: relative;
+      z-index: 1;
     }
 
     .landingContainer{

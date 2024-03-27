@@ -91,17 +91,16 @@ function CardItem(props){
 
     return (
       <>
-      <div className = "card_holder">
+      <div className = "card_holder" ref = {ref}>
           {CardInfo.map(item => (
             // return (
               <motion.li 
               className = "cards_item" 
               key={item.id} 
-              ref = {ref}
               animate = {controls}
               initial = "hidden"
                 variants ={{
-                    visible: {opacity: 1, top: "0", position: "relative"},
+                    visible: {opacity: 1, top: "0px", position: "relative"},
                     hidden: {opacity: 0, top: "-1.25rem", position: "relative"}
                 }}
                 transition = {{
