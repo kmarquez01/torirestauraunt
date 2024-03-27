@@ -53,8 +53,8 @@ function Navigation(){
     const webNav = 
         <div className = "webnav-menu">
             <li onClick = {() => { setState(false);}}><Link href="/Home"><button className = "navbut" >Home</button></Link></li>
-            <li onClick = {() => { setState(false);}}><Link href="/Menu"><button className = "navbut">About</button></Link></li>
-            <li onClick = {() => { setState(false);}} ><Link href="/About"><button className = "navbut">Portfolio</button></Link></li>
+            <li onClick = {() => { setState(false);}}><Link href="/Menu"><button className = "navbut">Menu</button></Link></li>
+            <li onClick = {() => { setState(false);}} ><Link href="/About"><button className = "navbut">About</button></Link></li>
             <li onClick = {() => { setState(false);}}><Link href="/Cart"><button className = "navbut">Contact</button></Link></li>
         </div>
 
@@ -97,7 +97,7 @@ function Navigation(){
                             <div className = "cart-added">{(totalAmount)}</div>
                         </div>
                     </Link>
-                    <ul>
+                    <ul className = "nav-holder">
                         {(!isMobile && state === false) ? webNav:
 
                         <button className = "sandwich" onClick = {handleClick}>
