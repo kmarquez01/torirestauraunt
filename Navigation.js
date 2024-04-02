@@ -47,7 +47,7 @@ function Navigation(){
            <li onClick = {() => { setState(false);}}><Link href="/Home"><button className = "navbut" >Home</button></Link></li>
            <li onClick = {() => { setState(false);}}><Link href="/Menu"><button className = "navbut">Menu</button></Link></li>
            <li onClick = {() => { setState(false);}}><Link href="/About"><button className = "navbut">About</button></Link></li>
-           <li onClick = {() => { setState(false);}}><Link href="/Cart"><button className = "navbut">Cart</button></Link></li>
+           {/* <li onClick = {() => { setState(false);}}><Link href="/Cart"><button className = "navbut">Cart</button></Link></li> */}
        </div>
 
     const webNav = 
@@ -55,7 +55,7 @@ function Navigation(){
             <li onClick = {() => { setState(false);}}><Link href="/Home"><button className = "navbut" >Home</button></Link></li>
             <li onClick = {() => { setState(false);}}><Link href="/Menu"><button className = "navbut">Menu</button></Link></li>
             <li onClick = {() => { setState(false);}} ><Link href="/About"><button className = "navbut">About</button></Link></li>
-            <li onClick = {() => { setState(false);}}><Link href="/Cart"><button className = "navbut">Cart</button></Link></li>
+            {/* <li onClick = {() => { setState(false);}}><Link href="/Cart"><button className = "navbut">Cart</button></Link></li> */}
         </div>
 
 
@@ -93,7 +93,7 @@ function Navigation(){
                 </Link>
                 <nav className = "navigation-bar">
                     <Link href="/Cart"><div className = "shopping-cart-container">
-                        <FiShoppingCart className = "shopping-cart" />
+                        <FiShoppingCart className = "shopping-cart"/>
                             <div className = "cart-added">{(totalAmount)}</div>
                         </div>
                     </Link>

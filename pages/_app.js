@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
     <ShopContextProvider>
-    <Component {...pageProps} />
+      <Component {...pageProps} />
     </ShopContextProvider>
 
     </>

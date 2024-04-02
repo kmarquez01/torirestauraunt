@@ -12,7 +12,7 @@ import Abouts from "./About"
 
 
 
-function App({children}){
+function App(){
 
     return(
       
