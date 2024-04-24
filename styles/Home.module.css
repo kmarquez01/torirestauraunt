@@ -102,6 +102,7 @@ background-color: #f6752a;
 }
 
 .circle{
+  z-index: 1;
   opacity: 100%;
   position: absolute;
   display: flex;
@@ -112,7 +113,6 @@ background-color: #f6752a;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  z-index: 9999;
 }
 
 .extra{

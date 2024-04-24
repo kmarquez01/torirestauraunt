@@ -5,12 +5,12 @@ import { HiMenu } from "react-icons/hi"
 import { FaTimes } from "react-icons/fa"
 
 import React, {useState, useEffect, useRef} from "react"
-import { FiShoppingCart} from "react-icons/fi";
 import { FaToriiGate } from "react-icons/fa";
 import { ShopContext } from "./contexts/shop-context"
 import {useContext} from "react"
 import CardInfo from "./Menu/CardInfo";
 import { useMediaQuery } from 'usehooks-ts'
+import Minicart from "./minicart";
 
 
 function Navigation(){
@@ -92,11 +92,10 @@ function Navigation(){
                 </button>
                 </Link>
                 <nav className = "navigation-bar">
-                    <Link href="/Cart"><div className = "shopping-cart-container">
-                        <FiShoppingCart className = "shopping-cart"/>
-                            <div className = "cart-added">{(totalAmount)}</div>
-                        </div>
-                    </Link>
+                    <div className = "shopping-cart-container">
+                        <Minicart />
+                        <div className = "cart-added">{(totalAmount)}</div>
+                    </div>   
                     <ul className = "nav-holder">
                         {(!isMobile && state === false) ? webNav:
 
