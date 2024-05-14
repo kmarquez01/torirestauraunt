@@ -145,8 +145,8 @@ img{
   background-color: white;
   font-size: 12px;
   border-radius: 30px;
-  height: 15px;
-  width: 15px;
+  height: 16px;
+  width: 16px;
   color: black;
   position: absolute;
   left: 25px;
@@ -154,6 +154,10 @@ img{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.cart-added:hover{
+  cursor: pointer;
 }
 
 .sandwich{
@@ -458,10 +462,10 @@ img{
 /* Menu */
 
 .cards {
-  padding-top: 4rem;
+  padding-top: 5rem;
   padding-right: 4rem;
   padding-left: 4rem;
-  padding-bottom: 0px;
+  padding-bottom: 4rem;
   background: #fff;
 }
 
@@ -483,7 +487,7 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  padding-bottom: 70px;
+  padding-bottom: 55px;
   font-size: 36px;
   display: flex;
   text-align: center;
@@ -501,7 +505,7 @@ h1 {
 }
 
 .cards_container{
-    padding-top: 10px;
+  padding-top: 40px;
 }
 .cards_wrapper {
   position: relative;
@@ -608,7 +612,7 @@ h1 {
 .cards_item_info {
   background-color: white;
   display: grid;
-  grid-template-rows: 4rem;
+  /* grid-template-rows: 4rem; */
   padding: 10px 10px 10px;
   align-self: center;
  
@@ -640,6 +644,11 @@ h1 {
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 500;
 
+}
+
+.cards_item_statement{
+  font-size: 16px;
+  padding-bottom: 1.5rem;
 }
 
 .side-image{
@@ -682,6 +691,7 @@ h1 {
   justify-content: center;
   align-content: center;
   gap: 30px;
+  padding-bottom: 1rem
   /* border-style: groove;
   border-bottom: none;
   border-left: none;
@@ -721,7 +731,7 @@ h1 {
   align-items: center;
   justify-content: flex-end;
   align-content: center;
-  padding-top:10px;
+  padding-top: 1.5rem
 }
 
 .cartbutton:hover{
@@ -779,7 +789,7 @@ h1 {
   border-bottom: none;
   border-left: none;
   border-right: none;
-  padding-top: 10px;
+  padding-top: 1.5rem;
 }
 
 .subprice{
@@ -1100,6 +1110,8 @@ h1 {
   display: flex;
   align-items: center;
   width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .cart_item{
@@ -1158,7 +1170,7 @@ h1 {
 .side-info-sub{
   display: flex;
   flex-direction: column;
-  gap: 5em;
+  gap: 1rem;
 ;
 }
 

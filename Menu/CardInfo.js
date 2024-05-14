@@ -24,7 +24,7 @@ const CardInfo = [
     {
         id: 4,
         image: "/images/img4.jpg",
-        name: "Ramen",
+        name: "Shio Ramen",
         description:"Noodle soup mixed with broth, miso, boiled egg and tonkotsu pork.",
         price: 7.50
     },
@@ -127,9 +127,9 @@ const CardInfo = [
     },
     {
         id: 18,
-        image: "/images/img6.jpg",
-        name: "Tonkatsu",
-        description: "Deep fried coated pork chops in crisp panko breadcrumbs.",
+        image: "/images/img18.jpg",
+        name: "Soba",
+        description: "Thin buckwheat noodles coupled with meat and vegetables.",
         price: 5.50
     }
 ]

@@ -112,11 +112,11 @@ function CardItem(props){
                 <button className = "cards_item_link" onClick = {() => {setDialogData(item); setOpenPopup(true);  setCartItemAmount(cartItems[item.id])}}>
                   <div className = "cont1">
                       {/* <figure className = "cards_item_picwrap" data-category = {item.name}> */}
-                    <h1 className = "cards_item_wrap">{item.name}</h1>
+                    <h1 className = "cards_item_wrap">View More</h1>
                     <img src={item.image} alt = "Image" className = "cards_item_img" onClick = {() => {setDialogData(item); setOpenPopup(true);  setCartItemAmount(cartItems[item.id])}}/>
                   {/* </figure> */}
                     <div className = "cards_item_info">
-                      <h5 className = "cards_item_text">{item.description}</h5>
+                      <h5 className = "cards_item_text">{item.name}</h5>
                     </div>
                   </div>
                 </button>
@@ -138,7 +138,7 @@ function CardItem(props){
               <div className = "side-info-sub">
                 <DialogTitle style = {{paddingLeft: "0px", paddingTop: "20px"}}>
                     <div className = "header-popout">
-                        Price
+                        {dialogData.name}
                         <FaTimes className = "close" onClick = {() => {setOpenPopup(false); setCounter(0); setPrice(0);}}>
                         </FaTimes>
                     </div>
@@ -146,6 +146,11 @@ function CardItem(props){
                 
                 <DialogContent style = {{display: "flex", paddingLeft: "10px", gap: "50px", flexDirection: "column"}}> 
                 <div className = "dialog-content-container">
+
+                  <div className = "cards_item_description">
+                      <h5 className = "cards_item_statement">{dialogData.description}</h5>
+                    </div>
+
                   <div className = "fooditem">
 
                       <div className = "fooditemsub">
