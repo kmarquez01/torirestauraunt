@@ -133,6 +133,14 @@ background-color: #f6752a;
 
 }
 
+.specials_title{
+  margin: auto;
+  text-align: center;
+  font-size: 40px;
+  padding-top: 40px;
+  color: black;
+}
+
 .showcase h1{
     font-size: 40px;
     text-align: inherit;
@@ -449,6 +457,12 @@ background-color: #f6752a;
     .title{
       text-wrap: wrap;
       left: auto;
+    }
+
+    .input_areas{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
   }

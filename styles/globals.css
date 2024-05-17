@@ -83,7 +83,7 @@ img{
 
 .gate{
   display: flex;
-  font-size: 18px;
+  font-size: 20px;
   color: #f6752a;
 }
 
@@ -135,7 +135,7 @@ img{
 }
 
 .shopping-cart{
-  font-size: 28px;
+  font-size: 30px;
   color: #f6752a;
   cursor: pointer;
   
@@ -221,16 +221,79 @@ img{
 
 }
 
-.showcase h1{
+/* .showcase h1{
   font-size: 40px;
   text-align: inherit;
   color: black;
-}
+} */
 
 .showcase p{
   color:black;
   margin: 20px 0;
 }
+
+.special-container{
+  display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.specials{
+  padding: 40px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+
+}
+
+.special_item_link{
+    backface-visibility: hidden;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: rgba(56, 125, 255, 0.17) 0px 6px 20px;
+    filter: drop-shadow(rgba(56, 125, 255, 0.016) 0px 6px 20px);
+    cursor: pointer;
+    border-radius: 10px;
+    border-width: 0px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.special_item_link:hover{
+  transform: perspective(100px) translateZ(1.01); 
+}
+
+.special_item_img{
+  position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    /* height: 100%; */
+    height: 350px;
+    max-height: 100%;
+    object-fit: cover;
+    transition: all 0.2s linear;
+}
+
+.special_item_img:hover{
+  transform: scale(1.04);
+    background-color: #000;
+    opacity: 0.25;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.special_item{
+  list-style: none;
+  cursor: pointer;
+  flex: 1 1;
+  margin: 0 .5rem;
+  border-radius: 10px;
+}
+
 
 .showcase .grid{
   grid-template-columns: 55% 45%;
@@ -513,6 +576,7 @@ h1 {
 }
 
 .cards_items, .cards_item_link {
+  
   display: flex;
   margin-bottom: 16px;
   flex-direction: column;
@@ -522,6 +586,7 @@ h1 {
 }
 
 .cards_item {
+  list-style: none;
   cursor: pointer;
   flex: 1;
   margin: 0 .5rem;

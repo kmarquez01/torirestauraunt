@@ -10,12 +10,17 @@ import Navigation from "../../Navigation"
 
 import {motion} from "framer-motion"
 
+import { useState } from "react"
+
 import {FaToriiGate} from "react-icons/fa"
 
 // import "../Home/index.css"
 
 
 function Homes(){
+
+    const [openPopup, setOpenPopup] = useState(false)
+    const [dialogData, setDialogData] = useState(null)
 
     return(
         <div className = {styles.container0}>
@@ -123,7 +128,8 @@ function Homes(){
                  </motion.div>
                 </div>
             </section>
-            <MainContent />
+            
+            <MainContent onClick = {() => {setOpenPopup(true); setDialogData(null);}}  />
             <Footer />
            
         </div>
