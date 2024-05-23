@@ -1651,6 +1651,19 @@ h1 {
   .navigation-bar{
     gap: 1rem;
   }
+
+  .dialogue-box-container{
+    flex-direction: column;
+  }
+
+  .side-image{
+    margin: 0.5em 1em;
+    max-height: 250px;
+  }
+
+  .header-popout{
+    padding-left: 10px;
+  }
 }
 
 @media only screen and (max-width: 900px){
@@ -1812,4 +1825,35 @@ h1 {
     width:100%;
     
   }
+}
+
+@media only screen and (max-width: 500px){
+
+  .showcase{
+    height:auto;
+  }
+
+  .specials{
+    flex-direction: column;
+  }
+
+  .special_item_img{
+    height: auto;
+  }
+
+  .cart_item{
+    grid-template-columns: none;
+  }
+
+  .details-container{
+    gap: 0px;
+  }
+
+  .item-price{
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+
 }
