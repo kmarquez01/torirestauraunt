@@ -256,15 +256,15 @@ img{
     box-shadow: rgba(56, 125, 255, 0.17) 0px 6px 20px;
     filter: drop-shadow(rgba(56, 125, 255, 0.016) 0px 6px 20px);
     cursor: pointer;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     border-width: 0px;
     overflow: hidden;
     text-decoration: none;
 }
-
+/* 
 .special_item_link:hover{
-  transform: perspective(100px) translateZ(1.01); 
-}
+  transform: perspective(100px) translateZ(1.0); 
+} */
 
 .special_item_img{
   position: relative;
@@ -279,11 +279,11 @@ img{
 }
 
 .special_item_img:hover{
-  transform: scale(1.04);
+  transform: scale(1.02);
     background-color: #000;
     opacity: 0.25;
     overflow: hidden;
-    border-radius: 30px;
+    /* border-radius: 30px; */
 }
 
 .special_item{
