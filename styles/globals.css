@@ -143,10 +143,10 @@ img{
 
 .cart-added{
   background-color: white;
-  font-size: 12px;
-  border-radius: 30px;
-  height: 16px;
-  width: 16px;
+  font-size: 11px;
+  border-radius: 10px;
+  height: 18px;
+  width: 18px;
   color: black;
   position: absolute;
   left: 25px;
@@ -1540,7 +1540,7 @@ h1 {
 }
 
 .mini-image{
-  margin-left: 1.5rem;
+  margin-left: 1.25rem;
   width: 100px;
 }
 
@@ -1556,6 +1556,7 @@ h1 {
     justify-content: space-between;
     align-items: flex-end;
     WIDTH: 100%;
+    margin-right: 1rem;
 }
 
 .checkout-button-container{

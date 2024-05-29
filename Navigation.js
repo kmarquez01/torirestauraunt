@@ -70,7 +70,14 @@ function Navigation(){
        
     }   
 
-    const isMobile = useMediaQuery('(max-width: 800px)')
+    const isMobile_ = useMediaQuery('(max-width: 800px)')
+
+    const [isMobile, setIsMobile] = useState(false);
+
+  // Work-around for server-side render
+  useEffect(() => {
+    setIsMobile(isMobile_);
+  }, [isMobile_]);
 
     
     return(

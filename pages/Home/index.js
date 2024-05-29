@@ -54,7 +54,7 @@ function Homes(){
                         animate = "visible"
                         variants = {{
                             hidden: {
-                                left: 'auto'
+                                left: '425px'
                             },
                             visible: {
                                 left: '0px',
@@ -84,30 +84,30 @@ function Homes(){
                             >Where food cravings are satisfied!
                             </motion.h1>
                             <div className = {styles.extra}>
-                            <Link href = "/Menu">
-                                <motion.button 
-                                className = {styles.button}
-                                initial = "hidden"
-                                animate = "visible"
-                                variants = {{
-                                    hidden: {
-                                        opacity: 0,
-                                        left: '0px'
-                                    },
-                                    visible: {
-                                        opacity: 1,
-                                        left: '0px',
-                                        transition: {
-                                            duration: 1.1,
-                                            delay: 2.3
+                                <Link href = "/Menu">
+                                    <motion.button 
+                                    className = {styles.button}
+                                    initial = "hidden"
+                                    animate = "visible"
+                                    variants = {{
+                                        hidden: {
+                                            opacity: 0,
+                                            left: '0px'
+                                        },
+                                        visible: {
+                                            opacity: 1,
+                                            left: '0px',
+                                            transition: {
+                                                duration: 1.1,
+                                                delay: 2.3
+                                            }
                                         }
-                                    }
-                                }}>
-                                    Menu
-                                </motion.button>
-                            </Link>
+                                    }}>
+                                        Menu
+                                    </motion.button>
+                                </Link>
+                            </div>
                         </div>
-                    </div>
                 </div>
                 </motion.div>
 
