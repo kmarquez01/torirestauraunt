@@ -27,9 +27,9 @@ function Homes(){
             <Navigation />
             <section className = {styles.home}>
             <div className = {styles.startcontainer}>
-            <video autoPlay muted loop playsInline className = {styles.vd}>
-                   <source src = "/videos/053_Trim.mp4" type = "video/mp4"/>
-               </video>
+            <img className = {styles.vd} src = "/images/homepage_img.jpg" >
+                 
+               </img>
                </div>
                 <div className = {styles.introcontainer}>
                 <motion.div className = {styles.introSubcontainer} initial = "hidden" animate = "visible" 
@@ -81,31 +81,57 @@ function Homes(){
                                     }
                                 }
                             }}
-                            >Where food cravings are satisfied!
+                            >A little taste of home
                             </motion.h1>
-                            <div className = {styles.extra}>
-                                <Link href = "/Menu">
-                                    <motion.button 
-                                    className = {styles.button}
-                                    initial = "hidden"
-                                    animate = "visible"
-                                    variants = {{
-                                        hidden: {
-                                            opacity: 0,
-                                            left: '0px'
-                                        },
-                                        visible: {
-                                            opacity: 1,
-                                            left: '0px',
-                                            transition: {
-                                                duration: 1.1,
-                                                delay: 2.3
+                            <div className = {styles.buttonContainer}>
+                                <div className = {styles.extra}>
+                                    <Link href = "/Menu">
+                                        <motion.button 
+                                        className = {styles.button}
+                                        initial = "hidden"
+                                        animate = "visible"
+                                        variants = {{
+                                            hidden: {
+                                                opacity: 0,
+                                                left: '0px'
+                                            },
+                                            visible: {
+                                                opacity: 1,
+                                                left: '0px',
+                                                transition: {
+                                                    duration: 1.1,
+                                                    delay: 2.3
+                                                }
                                             }
-                                        }
-                                    }}>
-                                        Menu
-                                    </motion.button>
-                                </Link>
+                                        }}>
+                                            Menu
+                                        </motion.button>
+                                    </Link>
+                                </div>
+                                <div className = {styles.extra}>
+                                    <Link href = "/Pickup">
+                                        <motion.button 
+                                        className = {styles.button}
+                                        initial = "hidden"
+                                        animate = "visible"
+                                        variants = {{
+                                            hidden: {
+                                                opacity: 0,
+                                                left: '0px'
+                                            },
+                                            visible: {
+                                                opacity: 1,
+                                                left: '0px',
+                                                transition: {
+                                                    duration: 1.1,
+                                                    delay: 2.3
+                                                }
+                                            }
+                                        }}>
+                                            Pickup
+                                        </motion.button>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                 </div>

@@ -1,12 +1,13 @@
 /* Home */
 
 .introcontainer{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-bottom: 5%;
 }
 
 .startcontainer{
@@ -43,7 +44,7 @@ position: relative;
 color: #f6752a;
 line-height: 1.6em;
 overflow: hidden;
-font-size: 40px;
+font-size: 48px;
 }
 
 .button{
@@ -57,6 +58,13 @@ font-size: 40px;
   background-color: transparent;
   color: #f6752a;
   }
+
+.buttonContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
 
 .button:hover{
 cursor: pointer;
@@ -104,7 +112,7 @@ background-color: #f6752a;
 .circle{
   z-index: 1;
   opacity: 100%;
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   height: 140px;
   width: 140px;
@@ -402,7 +410,8 @@ background-color: #f6752a;
   .landingContainer{
     display: flex;
     align-items: center;
-    justify-content: flex-end
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
   .linkingContainer{
