@@ -39,30 +39,43 @@
 }
 
 .title{
-
+font-family: '__Poppins_fdcb09';
 position: relative;
-color: #f6752a;
+color: white;
 line-height: 1.6em;
 overflow: hidden;
-font-size: 48px;
+font-size: 5rem;
+font-weight: bold;
+display: flex;
+justify-content: flex-end;
+}
+
+.logoImg1{
+  object-fit: contain;
+  width: 15rem;
+  left: 0;
+  top: 0;
+  position: absolute;
+  padding-bottom: 30%;
 }
 
 .button{
   position: relative;
   border: solid 2px;
-  border-color: #f6752a;
-  padding: 5px 20px;	
+  padding: 5px 60px;	
+  border-radius: 10px;
   font-family: sans-serif;
   font-size: 30px;
   cursor: pointer;
-  background-color: transparent;
-  color: #f6752a;
+  background-color: #f6752a;
+  border-color: black;
+  color:white;
   }
 
 .buttonContainer{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 10%;
 }
 
@@ -98,7 +111,7 @@ background-color: #f6752a;
   }
   
 .introSubcontainer{
-  position: relative;
+  /* position: relative; */
   overflow: hidden;
   max-width: 60em;
   width: 100%;
@@ -422,6 +435,21 @@ background-color: #f6752a;
   }
   
   @media screen and (max-width: 800px) {
+
+    .title{
+      font-size: 3rem;
+    }
+
+    .buttonContainer{
+      justify-content: flex-end;
+      flex-direction: column;
+    }
+
+    .logoImg1{
+      padding-bottom: 75%;
+      right: 0;
+      left: 20%;
+    }
 
     .footer_link_wrapper{
       grid-template-rows: repeat(auto-fill, 25%);

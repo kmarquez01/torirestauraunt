@@ -14,6 +14,10 @@ import { useState } from "react"
 
 import {FaToriiGate} from "react-icons/fa"
 
+import Torilog1 from "../../public/images/Torilog1.svg"
+
+import Image from 'next/image';
+
 // import "../Home/index.css"
 
 
@@ -46,9 +50,9 @@ function Homes(){
                         }
                     }
                 }}>
-
+            <Image className = {styles.logoImg1} priority src ={Torilog1}/>
                     <div className = {styles.landingContainer}>
-                        <motion.div 
+                        {/* <motion.div 
                         className = {styles.circle}
                         initial = "hidden"
                         animate = "visible"
@@ -60,9 +64,9 @@ function Homes(){
                                 left: '0px',
                                 transition: {duration: 1.1}
                             }
-                        }}>
-                            <i className = {styles.gate}><FaToriiGate /></i>
-                        </motion.div>
+                        }}> */}
+                            {/* <Image className = {styles.logoImg1} priority src ={Torilog1}/> */}
+                        {/* </motion.div> */}
                         
                         <div className = {styles.linkingContainer}>
                             <motion.h1 
