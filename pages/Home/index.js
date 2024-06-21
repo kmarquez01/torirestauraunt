@@ -8,9 +8,11 @@ import  Link  from 'next/link'
 
 import Navigation from "../../Navigation"
 
-import {motion} from "framer-motion"
+import {motion, useAnimation} from "framer-motion"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
+
+import { useInView } from 'react-intersection-observer';
 
 import {FaToriiGate} from "react-icons/fa"
 
@@ -23,8 +25,18 @@ import Image from 'next/image';
 
 function Homes(){
 
+    let pickupRef = useRef(null);
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+
     const [openPopup, setOpenPopup] = useState(false)
     const [dialogData, setDialogData] = useState(null)
+
+    useEffect(() => {
+        if (inView) {
+          controls.start('visible');
+        }
+      }, [controls, inView]);
 
     return(
         <div className = {styles.container0}>
@@ -113,7 +125,7 @@ function Homes(){
                                     </Link>
                                 </div>
                                 <div className = {styles.extra}>
-                                    <Link href = "/Pickup">
+                                    <Link href = "/About">
                                         <motion.button 
                                         className = {styles.button}
                                         initial = "hidden"

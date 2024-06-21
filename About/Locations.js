@@ -4,9 +4,9 @@ const updatedlocations = locations.map((locations) => {
     return <li className = "location-list">{locations}</li>
 })
 
-function Locations(){
+function Locations({pickupRef}){
     return(
-        <section id = "Locations">
+        <section id = "Locations" ref = {pickupRef}>
             {/* <div className = "location-holder"> */}
                 <div className = "location-container">
                     <div className = "location-text">

@@ -9,13 +9,13 @@ import Contact from "../../About/Contact"
 import Landing from "../../About/Landing"
 import Footer from "../../Home/Footer"
 
-function Abouts(){
+function Abouts({pickupRef}){
     return(
         <div>
             <Navigation />
             <Landing />
             <WhoWeAre />
-            <Locations />
+            <Locations pickupRef = {pickupRef}/>
             <Contact />
             <Footer />
         </div>
