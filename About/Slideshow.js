@@ -110,7 +110,7 @@ else{
             
             </div>
             <div className = "aboutus-container">
-                <title className = "aboutus-title">Who We are</title> 
+                <div className = "aboutus-title">Who we are</div> 
                 <p className = "aboutus-p">We are a japanese based restaurant who thrives on providing the highest quality food from our culture. Innovation and motivation is what drives us forward, and we hope to show that through our dishes!</p>
             </div>
              
