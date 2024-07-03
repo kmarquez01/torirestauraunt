@@ -147,10 +147,20 @@ background-color: rgb(243, 43, 43);
 /* Showcase */
 
 .showcase{
-    height: 55vh;
-    background-color: var(--primary-color); 
+    /* height: 600px; */
+    background-color: black; 
     color: white;
     position: relative;
+
+}
+
+.showcaseBackground{
+  opacity: 50%;
+    width: 50%;
+    color: white;
+    position: absolute;
+    object-fit: contain;
+    display: flex;
 
 }
 
@@ -159,7 +169,7 @@ background-color: rgb(243, 43, 43);
   text-align: center;
   font-size: 40px;
   padding-top: 40px;
-  color: black;
+  color: white;
 }
 
 .showcase h1{
@@ -267,6 +277,7 @@ background-color: rgb(243, 43, 43);
     text-align: center;
     /* margin-bottom: 24px; */
     padding: 40px;
+    padding-bottom: 0px;
     color: #fff;
     font-size: 24px;
     gap: 30px;

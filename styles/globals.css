@@ -252,7 +252,7 @@ img{
 .special_item_link{
     backface-visibility: hidden;
     flex-direction: column;
-    width: 100%;
+    width: 75%;
     box-shadow: rgba(56, 125, 255, 0.17) 0px 6px 20px;
     filter: drop-shadow(rgba(56, 125, 255, 0.016) 0px 6px 20px);
     cursor: pointer;
@@ -287,6 +287,8 @@ img{
 }
 
 .special_item{
+  display: flex;
+  justify-content: center;
   list-style: none;
   cursor: pointer;
   flex: 1 1;

@@ -7,6 +7,7 @@ import { useInView } from 'react-intersection-observer';
 import {Dialog, DialogTitle, DialogContent, Card} from "@mui/material"
 import { ShopContext } from "../contexts/shop-context";
 import { FaTimes } from "react-icons/fa"
+import NoodleBowls from "../Menu/NoodleBowls";
 
 
 function MainContent(props){
@@ -83,10 +84,13 @@ function MainContent(props){
     return (
         <>
         
-        <section className ="showcase" ref = {ref}>
+        <section className = {styles.showcase}>
+        <img className = {styles.showcaseBackground} src = "/images/Tori_log_kanji.png" >
+                 
+        </img>
         <div className ="special-container">
             <h1 className = {styles.specials_title}>House Specials</h1>
-            <div className = "specials">
+            <div className = "specials" ref = {ref}>
             {HouseSpecials.map(item => (
             
               <motion.li 
@@ -119,6 +123,43 @@ function MainContent(props){
            
           ))}
             </div>
+
+            <h1 className = {styles.specials_title}>Noodle Bowls</h1>
+            <div className = "specials">
+            {NoodleBowls.map(item => (
+            
+              <motion.li 
+              className = "special_item" 
+              key={item.id} 
+              animate = {controls}
+              initial = "hidden"
+                variants ={{
+                    visible: {opacity: 1, top: "0px", position: "relative"},
+                    hidden: {opacity: 0, top: "-1.25rem", position: "relative"}
+                }}
+                transition = {{
+                    ease: "easeInOut",
+                    delay: (item.id * 0.1),
+                    duration: 1
+                }}
+              onClick = {props.onClick}>
+                <button className = "special_item_link" onClick = {() => {setDialogData(item); setOpenPopup(true);  setCartItemAmount(cartItems[item.id])}}>
+                  <div className = "cont1">
+                      {/* <figure className = "cards_item_picwrap" data-category = {item.name}> */}
+                    <h1 className = "cards_item_wrap">View More</h1>
+                    <img src={item.image} alt = "Image" className = "special_item_img" onClick = {() => {setDialogData(item); setOpenPopup(true);  setCartItemAmount(cartItems[item.id])}}/>
+                  {/* </figure> */}
+                    <div className = "cards_item_info">
+                      <h5 className = "cards_item_text">{item.name}</h5>
+                    </div>
+                  </div>
+                </button>
+              </motion.li>
+           
+          ))}
+            </div>
+
+            
     {openPopup === true ? (  
    
    // (firstState === true ? ( () => setCounter(0) && setPrice(0)) : "" ) &&

@@ -140,7 +140,7 @@ function Homes(){
                                                 left: '0px',
                                                 transition: {
                                                     duration: 1.1,
-                                                    delay: 2.3
+                                                    delay: 2.6
                                                 }
                                             }
                                         }}>

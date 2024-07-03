@@ -46,11 +46,11 @@ function Footer(){
                   <h2>Opening Hours</h2>
                   {/* <div className = "footer-information"> */}
                     <p>Sunday: Closed</p>
-                    <p>Monday: 8:00am - 11:00pm</p>
-                    <p>Tuesday: 8:00am - 11:00pm</p>
-                    <p>Wednesday: 8:00am - 11:00pm</p>
-                    <p>Thursday: 8:00am - 11:00pm</p>
-                    <p>Friday: 8:00am - 12:00am</p>
+                    <p>Monday: 12:00pm - 11:00pm</p>
+                    <p>Tuesday: 12:00pm - 11:00pm</p>
+                    <p>Wednesday: 12:00pm - 11:00pm</p>
+                    <p>Thursday: 12:00pm - 11:00pm</p>
+                    <p>Friday: 12:00pm - 12:00am</p>
                     <p>Saturday: Closed</p>
                   {/* </div> */}
               </div>

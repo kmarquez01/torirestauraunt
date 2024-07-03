@@ -21,13 +21,13 @@ const HouseSpecials = [
         price: 6.50,
 
     },
-    {
-        id: 18,
-        image: "/images/img18.jpg",
-        name: "Soba",
-        description: "Thin buckwheat noodles coupled with meat and vegetables.",
-        price: 5.50
-    },
+    // {
+    //     id: 18,
+    //     image: "/images/img18.jpg",
+    //     name: "Soba",
+    //     description: "Thin buckwheat noodles coupled with meat and vegetables.",
+    //     price: 5.50
+    // },
 ]
 
 export default HouseSpecials 
